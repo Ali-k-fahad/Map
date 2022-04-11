@@ -59,7 +59,8 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
         pointAnnotation.coordinate = coordinate
         pointAnnotation.title = place.place.name ?? "No Name"
         
-        mapView.removeAnnotation(mapView.annotations as! MKAnnotation)
+        mapView.removeAnnotations(mapView.annotations)
+        
         mapView.addAnnotation(pointAnnotation)
         
         //moving map to new location...

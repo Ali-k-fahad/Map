@@ -48,7 +48,7 @@ struct Home: View {
                                         Text(place.place.name ?? "")
                                             .foregroundColor(.mint)
                                             .frame(maxWidth: .infinity, alignment: .leading)
-                                        padding(.leading)
+                                            .padding(.leading)
                                             .onTapGesture {
                                                 mapData.selectPlace(place: place)
                                             }
@@ -56,7 +56,7 @@ struct Home: View {
                                         Divider()
                                     }
                                 }
-                                padding(.top)
+                                .padding(.top)
                             }
                             .background(Color.white)
                         }
@@ -64,6 +64,7 @@ struct Home: View {
                 Spacer()
 
                     }
+            
                     .padding()
             
                 
